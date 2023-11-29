@@ -120,7 +120,7 @@
 
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
   <div class="col-md-2">
-    <img src="images/REPUBLIC_1.png" alt="Hero Image" class="img-fluid" width="180px">
+    <img src="REPUBLIC_1.png" alt="Hero Image" class="img-fluid" width="180px">
   </div>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
@@ -172,7 +172,7 @@
       </div>
 
       <div class="col-md-6">
-        <img src="images/jfimage2.avif" alt="Hero Image" class="img-fluid" width="250px">
+        <img src="jfimage2.avif" alt="Hero Image" class="img-fluid" width="250px">
       </div>
 
     </div>
@@ -213,7 +213,7 @@
   <div class="row">
     <div class="col-md-3">
       <div class="card">
-        <img src="images/htmlcss.png" class="card-img-top" alt="Card Image 0">
+        <img src="htmlcss.png" class="card-img-top" alt="Card Image 0">
         <div class="card-body">
           <h5 class="card-title">Introduction to HTML and CSS</h5>
           <div class="icon-text-container">
@@ -232,7 +232,7 @@
     </div>
     <div class="col-md-3">
       <div class="card">
-        <img src="images/uiux.webp" class="card-img-top" alt="Card Image 1">
+        <img src="uiux.webp" class="card-img-top" alt="Card Image 1">
         <div class="card-body">
           <h5 class="card-title">User Experience and Interface Design</h5>
           <div class="icon-text-container">
@@ -251,7 +251,7 @@
     </div>
     <div class="col-md-3">
       <div class="card">
-        <img src="images/ios.jpg" class="card-img-top" alt="Card Image 2">
+        <img src="ios.jpg" class="card-img-top" alt="Card Image 2">
         <div class="card-body">
           <h5 class="card-title">iOS App Development using Xcode and Swift</h5>
           <div class="icon-text-container">
@@ -270,7 +270,7 @@
     </div>
     <div class="col-md-3">
       <div class="card">
-        <img src="images/javascript.png" class="card-img-top" alt="Card Image 3">
+        <img src="javascript.png" class="card-img-top" alt="Card Image 3">
         <div class="card-body">
           <h5 class="card-title">Front-end JavaScript Frameworks</h5>
           <div class="icon-text-container">
@@ -363,7 +363,7 @@
       </button>
     </div>
     <div class="offcanvas-body">
-      <!-- Bookmarked courses will be dynamically added here -->
+      <!-- Bookmarked courses will be added here -->
     </div>
   </div>
 </div>
@@ -379,7 +379,7 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
 
-<script src="path/to/tags.js"></script>
+<script src="tags.js"></script>
 
 <script>
   $(function() {
@@ -399,23 +399,19 @@
     $(".fa-bookmark").click(function() {
   const card = $(this).closest(".card");
 
-  // Clone the card
   const clonedCard = card.clone();
   clonedCard.find(".fa-bookmark").remove();
 
-  // Create a new column and append the cloned card to the bookmarked courses container
   const bookmarkedCoursesContainer = $("#bookmarkedCoursesContainer");
   const newColumn = $('<div class="col-md-3"></div>').append(clonedCard);
   bookmarkedCoursesContainer.append(newColumn);
 
-  // Scroll to the bottom of the offcanvas
   $("#bookmarkOffcanvas .offcanvas-body").scrollTop($("#bookmarkOffcanvas .offcanvas-body")[0].scrollHeight);
 
   alert("Course bookmarked!");
 });
 
 $(document).ready(function() {
-  // Initialize carousel with disabled automatic sliding
   $("#carouselExample").carousel({
     interval: false
   });
